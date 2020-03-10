@@ -104,7 +104,7 @@ encode(Data, Options) ->
         [Bin] when is_binary(Bin) ->
             Bin;
         RevIOData when is_list(RevIOData) ->
-            lists:reverse(RevIOData)
+            iolist_to_binary(lists:reverse(RevIOData))
     end.
 
 
